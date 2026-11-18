@@ -70,25 +70,34 @@ def main():
     # test : modèle de référence entraîné sur le synthétique (v2), testé sur le réel
     # même plage que la mesure : on coupe le synthétique à 100-650 cm-1 pour une comparaison juste
     w = (grid >= 100) & (grid <= 620)
-    tr = l2.split.values == "train"
+    tr = np.ones(len(l2), bool)  # entraînement sur tout le simulé ; le test est le réel
     clf = RandomForestClassifier(n_estimators=300, random_state=0, n_jobs=-1)
     clf.fit(norm(X2[tr][:, w]), l2.famille[tr])
-    te = l2.split.values == "test"
-    acc_synth = (clf.predict(norm(X2[te][:, w])) == l2.famille[te].values).mean()
+    acc_synth = float("nan")  # pas de test simulé ici : voir verifier_v2 (validation groupée)
     pred = clf.predict(norm(Xr[:, w]))
     lr["pred_reference"] = pred
-    print(f"[Sans prétraitement] plage 100-620 cm-1. Test synthétique : {acc_synth:.3f}")
+    print("[Sans prétraitement] plage 100-620 cm-1, entraîné sur tout le simulé")
     print("Spectres réels prédits TMD (bonne réponse) :")
     print(lr.groupby("source").pred_reference.apply(lambda s: f"{(s == 'TMD').mean():.1%} ({(s == 'TMD').sum()}/{len(s)})").to_string())
 
     g = grid[w]
     clf2 = RandomForestClassifier(n_estimators=300, random_state=0, n_jobs=-1)
     clf2.fit(pretraiter(X2[tr][:, w], g), l2.famille[tr])
-    acc2 = (clf2.predict(pretraiter(X2[te][:, w], g)) == l2.famille[te].values).mean()
+    acc2 = float("nan")
     lr["pred_pretraite"] = clf2.predict(pretraiter(Xr[:, w], g))
-    print(f"[Avec prétraitement minimal] Test synthétique : {acc2:.3f}")
+    print("[Avec ligne de base]")
     print(lr.groupby("source").pred_pretraite.apply(lambda s: f"{(s == 'TMD').mean():.1%} ({(s == 'TMD').sum()}/{len(s)})").to_string())
-    lr[["source", "temperature_K", "excitation_nm", "pred_reference", "pred_pretraite"]].to_csv(Path(a.v3) / "test_modele_reference_sur_reel.csv", index=False)
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent))
+    from pretraitement import normaliser_sans_si
+    wr = (grid >= 100) & (grid <= 620)
+    def prep3(X):
+        return np.nan_to_num(pretraiter(normaliser_sans_si(X, grid)[:, wr], grid[wr]), nan=0.0)
+    clf3 = RandomForestClassifier(n_estimators=300, random_state=0, n_jobs=-1).fit(prep3(X2), l2.famille)
+    lr["pred_recommande"] = clf3.predict(prep3(Xr))
+    print("[Ligne de base + normalisation sans silicium]")
+    print(lr.groupby("source").pred_recommande.apply(lambda s: f"{(s == 'TMD').mean():.1%} ({(s == 'TMD').sum()}/{len(s)})").to_string())
+    lr[["source", "temperature_K", "excitation_nm", "pred_reference", "pred_pretraite", "pred_recommande"]].to_csv(Path(a.v3) / "test_modele_reference_sur_reel.csv", index=False)
 
 
 if __name__ == "__main__":

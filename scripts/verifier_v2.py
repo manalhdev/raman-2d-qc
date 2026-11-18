@@ -35,7 +35,7 @@ def main():
     fig, axes = plt.subplots(3, 1, figsize=(10, 7.5), facecolor=SURF, sharex=True)
     rng = np.random.default_rng(1)
     for ax, fam in zip(axes, ["carbone", "h-BN", "TMD"]):
-        i = rng.choice(np.flatnonzero((lab.famille == fam) & (lab.split == "train") & ((lab.id == 577) | (fam != "carbone"))))
+        i = rng.choice(np.flatnonzero((lab.famille == fam) & ((lab.id == 577) | (fam != "carbone"))))
         r = lab.iloc[i]
         ax.set_facecolor(SURF)
         ax.plot(grid, X[i], color=BLUE, lw=1.2)
@@ -52,15 +52,20 @@ def main():
     Path(a.out).mkdir(parents=True, exist_ok=True)
     fig.savefig(Path(a.out) / "exemples_v2.png", dpi=150, facecolor=SURF)
 
-    # 3. classifieur de référence (vérification que le dataset est apprenable, pas un résultat)
-    Xn = X - X.min(axis=1, keepdims=True)
-    Xn = Xn / Xn.max(axis=1, keepdims=True)
-    tr, te = lab.split.values == "train", lab.split.values == "test"
-    clf = RandomForestClassifier(n_estimators=300, random_state=0, n_jobs=-1).fit(Xn[tr], lab.famille[tr])
-    pred = clf.predict(Xn[te])
-    print(classification_report(lab.famille[te], pred, digits=3))
-    print(pd.DataFrame(confusion_matrix(lab.famille[te], pred, labels=clf.classes_),
-                       index=clf.classes_, columns=clf.classes_))
+    # 3. classifieur de référence, validation GROUPÉE PAR MATÉRIAU (plis du dataset)
+    #    (vérification que le dataset est apprenable ; pas un résultat du projet)
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent))
+    from pretraitement import preparer
+    from sklearn.model_selection import StratifiedKFold, cross_val_predict
+    Xp, _ = preparer(X, grid)
+    y = lab.famille.values
+    clf = RandomForestClassifier(n_estimators=300, random_state=0, n_jobs=-1)
+    for nom, plis in [("aléatoire (FAUX : fuite par matériau)", list(StratifiedKFold(3, shuffle=True, random_state=0).split(Xp, y))),
+                      ("groupée par matériau (à utiliser)", [(np.flatnonzero(lab.fold != k), np.flatnonzero(lab.fold == k)) for k in sorted(lab.fold.unique())])]:
+        pred = cross_val_predict(clf, Xp, y, cv=plis)
+        par_fam = {f: f"{(pred[y == f] == f).mean():.0%}" for f in ["carbone", "h-BN", "TMD"]}
+        print(f"Validation {nom} : {np.mean(pred == y):.1%} | {par_fam}")
 
 
 if __name__ == "__main__":

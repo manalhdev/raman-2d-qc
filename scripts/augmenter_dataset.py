@@ -1,12 +1,17 @@
 """
-Dataset v2 : séparation entraînement / test + recalage + augmentation réaliste.
+Dataset v2 : recalage + augmentation réaliste + plis de validation GROUPÉS PAR MATÉRIAU.
 
 Part des raies calculées (modes_raman_tous.csv) des 133 matériaux des 3 familles et produit
 des spectres « comme mesurés » : pics de largeur variable, décalage de calibration, bruit,
 fond de fluorescence, pic du silicium, intensités variables. Classes équilibrées.
 
 Usage :
-    python augmenter_dataset.py --dataset dataset/ --out dataset_v2/ [--n-train 1000 --n-test 250 --seed 0]
+    python augmenter_dataset.py --dataset dataset/ --out dataset_v2/ [--n-par-famille 1250 --n-plis 3 --seed 0]
+
+Correction du 18/11/2026 : l'ancienne version mettait les MÊMES matériaux de carbone et de h-BN (3 chacun)
+en entraînement et en test (fuite par matériau : 97 % en validation aléatoire, 36 % en validation groupée).
+Désormais chaque spectre porte son matériau (`groupe`) et un pli (`fold`) : tous les spectres d'un matériau
+sont dans le même pli. Évaluer avec ces plis (GroupKFold) ; ne jamais mélanger les spectres d'un matériau.
 
 Tous les paramètres de simulation sont des CHOIX PAR DÉFAUT, à valider en équipe (voir PARAMS).
 """
@@ -115,10 +120,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--n-train", type=int, default=1000, help="spectres d'entraînement par famille")
-    ap.add_argument("--n-test", type=int, default=250, help="spectres de test par famille")
+    ap.add_argument("--n-par-famille", type=int, default=1250, help="spectres simulés par famille")
+    ap.add_argument("--n-plis", type=int, default=3, help="plis de validation groupée (3 = un matériau de carbone et de h-BN par pli)")
     ap.add_argument("--seed", type=int, default=0)
-    ap.add_argument("--frac-test", type=float, default=0.2)
     a = ap.parse_args()
     rng = np.random.default_rng(a.seed)
     src, out = Path(a.dataset), Path(a.out)
@@ -129,41 +133,39 @@ def main():
     modes = pd.read_csv(src / "modes_raman_tous.csv")
     modes = modes[(modes.frequence_cm1 > 1) & (modes.intensite_A4_amu > 1e-6)]
 
-    # ---- séparation entraînement / test, par formule ----
-    base["split"] = "train"
-    tmd_formules = np.array(sorted(base.loc[base.famille == "TMD", "formule"].unique()))
-    rng.shuffle(tmd_formules)
-    test_f = set(tmd_formules[: max(1, round(a.frac_test * len(tmd_formules)))])
-    base.loc[(base.famille == "TMD") & base.formule.isin(test_f), "split"] = "test"
-    # carbone et h-BN : une seule formule chacun -> impossible de séparer par formule.
-    # Les mêmes matériaux de base servent aux deux, avec des variantes tirées indépendamment.
-    base.loc[base.famille != "TMD", "split"] = "train+test"
-    base[["id", "formule", "famille", "groupe_espace", "split"]].to_csv(out / "split_materiaux.csv", index=False)
+    # ---- plis de validation groupés par matériau ----
+    # Chaque matériau (id Materials Cloud) va entièrement dans UN pli ; dans chaque famille les matériaux sont
+    # répartis à tour de rôle entre les plis, pour que chaque pli contienne les trois familles.
+    base["fold"] = -1
+    for fam in FAMILLES:
+        ids = base.loc[base.famille == fam, "id"].values.copy()
+        rng.shuffle(ids)
+        for k, uid in enumerate(ids):
+            base.loc[base.id == uid, "fold"] = k % a.n_plis
+    base[["id", "formule", "famille", "groupe_espace", "fold"]].to_csv(out / "plis_materiaux.csv", index=False)
 
     raies = {uid: (g.frequence_cm1.values, g.intensite_A4_amu.values) for uid, g in modes.groupby("id")}
 
     X, rows = [], []
-    for split, n in [("train", a.n_train), ("test", a.n_test)]:
-        for fam in FAMILLES:
-            ids = base[(base.famille == fam) & base.split.isin([split, "train+test"])].id.values
-            for k in range(n):
-                uid = int(ids[k % len(ids)])
-                f, amp = raies[uid]
-                y, info = simuler(rng, uid, fam, recaler(uid, f), amp)
-                X.append(y)
-                r = base.loc[base.id == uid].iloc[0]
-                rows.append(dict(split=split, id=uid, formule=r.formule, famille=fam,
-                                 recale=uid in RECALAGE, **info))
+    for fam in FAMILLES:
+        ids = base[base.famille == fam].id.values
+        for k in range(a.n_par_famille):
+            uid = int(ids[k % len(ids)])
+            f, amp = raies[uid]
+            y, info = simuler(rng, uid, fam, recaler(uid, f), amp)
+            X.append(y)
+            r = base.loc[base.id == uid].iloc[0]
+            rows.append(dict(groupe=uid, fold=int(r.fold), id=uid, formule=r.formule, famille=fam,
+                             recale=uid in RECALAGE, **info))
     X = np.vstack(X)
     lab = pd.DataFrame(rows)
     np.savez_compressed(out / "spectres_v2.npz", X=X, grid=GRID)
     lab.to_csv(out / "etiquettes_v2.csv", index=False)
     (out / "parametres_simulation.json").write_text(json.dumps(
-        dict(seed=a.seed, n_train=a.n_train, n_test=a.n_test, params=PARAMS,
+        dict(seed=a.seed, n_par_famille=a.n_par_famille, n_plis=a.n_plis, params=PARAMS,
              recalage={str(k): v for k, v in RECALAGE.items()}), indent=2, ensure_ascii=False))
 
-    print("Formules TMD test :", len(test_f), "/", len(tmd_formules))
-    print(lab.groupby(["split", "famille"]).size().to_string())
+    print(lab.groupby(["fold", "famille"]).agg(spectres=("id", "size"), materiaux=("id", "nunique")).to_string())
     print("X :", X.shape)
 
 

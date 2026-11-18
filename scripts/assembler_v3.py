@@ -19,12 +19,14 @@ def main():
     l2 = pd.read_csv(v2 / "etiquettes_v2.csv")
     lr = pd.read_csv(v3 / "etiquettes_reels.csv")
 
-    s = pd.DataFrame(dict(type="simule", source="Materials_Cloud_2024.148_augmente", split=l2.split,
+    s = pd.DataFrame(dict(type="simule", source="Materials_Cloud_2024.148_augmente", split="cv",
+                          groupe=l2.groupe.astype(str), fold=l2.fold,
                           famille=l2.famille, materiau=l2.formule, id_materials_cloud=l2.id,
                           structure="", temperature_K=np.nan, excitation_nm=np.nan,
                           cm1_min=100.0, cm1_max=3200.0))
     s = pd.concat([s, l2[["recale", "fwhm", "decalage", "silicium", "fond", "snr"]]], axis=1)
-    r = pd.DataFrame(dict(type="reel", source=lr.source, split="test_reel", famille=lr.famille,
+    r = pd.DataFrame(dict(type="reel", source=lr.source, split="test_reel",
+                          groupe=lr.source + "_" + lr.materiau, fold=-1, famille=lr.famille,
                           materiau=lr.materiau, id_materials_cloud=np.nan, structure=lr.structure,
                           temperature_K=lr.temperature_K, excitation_nm=lr.excitation_nm,
                           cm1_min=lr.cm1_min.clip(lower=100), cm1_max=lr.cm1_max.clip(upper=3200)))

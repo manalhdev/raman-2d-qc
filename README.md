@@ -25,7 +25,7 @@ Encadrante : Sabrine Ayari. Équipe de 5 étudiants.
 data/
   sources/   fichiers d'origine téléchargés (voir « Sources et licences »)
   v1/        133 spectres calculés (3 familles) + métadonnées des 3504 matériaux + mesures MoS2 (Zenodo)
-  v2/        3750 spectres simulés « comme mesurés », équilibrés, séparés train / test
+  v2/        3750 spectres simulés « comme mesurés », équilibrés, en 3 plis groupés par matériau
   v3/        v2 + 521 spectres Raman MESURÉS (test_reel)   <- dataset à utiliser
 scripts/     extraction, augmentation, assemblage, vérifications (Python)
 figures/     figures de contrôle
@@ -45,7 +45,14 @@ pip install -r requirements.txt
 import numpy as np, pandas as pd
 d = np.load("data/v3/spectres_v3.npz"); X, grid = d["X"], d["grid"]   # (4271, 3101), 100 -> 3200 cm-1
 lab = pd.read_csv("data/v3/etiquettes_v3.csv")
-train, test, test_reel = (lab.split == s for s in ["train", "test", "test_reel"])
+```
+Avec le prétraitement recommandé et les plis groupés par matériau :
+```python
+import sys; sys.path.insert(0, "scripts")
+from pretraitement import charger
+from sklearn.model_selection import PredefinedSplit
+X, y, groupes, plis, lab, grille = charger("data/v3", jeu="cv")   # simulé : valider avec PredefinedSplit(plis)
+Xr, yr, *_ = charger("data/v3", jeu="test_reel")                  # 521 spectres mesurés
 ```
 `X` contient des NaN là où un spectre mesuré n'a pas de donnée.
 
@@ -68,9 +75,14 @@ Vérifié le 18/11/2026 : cette suite redonne à l'identique les fichiers de `da
 ## Principaux constats à ce stade
 
 - Base calculée très déséquilibrée : 127 TMD, 3 carbone, 3 h-BN ; aucune monocouche de MoS₂ 2H.
+- **Fuite par matériau (corrigée le 18/11/2026)** : en validation aléatoire, un modèle de référence atteint 97,5 % ;
+  groupé par matériau, il tombe à 34,7 % (carbone 3 %, h-BN 2 %, TMD 99 %). Le bon score ne vaut que pour les TMD :
+  il faut plus de matériaux de carbone et de h-BN. Toujours valider en GroupKFold par matériau (colonne `fold`).
 - Fréquences calculées décalées par rapport aux mesures (graphène : G à 1443 contre ≈1580 cm⁻¹) : recalage dans le v2.
-- Un modèle entraîné sur des spectres simulés reconnaît 10 % des vrais spectres de WS₂ sans prétraitement,
-  69 % avec une simple soustraction de ligne de base : **le prétraitement est décisif**.
+- Un modèle entraîné sur des spectres simulés reconnaît 11 % des vrais spectres de WS₂ sans prétraitement,
+  65 % avec une simple soustraction de ligne de base : **le prétraitement est décisif**.
+- Prétraitement recommandé (`scripts/pretraitement.py`) : normalisation sans le pic du silicium, fenêtres
+  100-1800 et 2500-2850 cm⁻¹ ; ni imputation ni SMOTE (pas de NaN dans le simulé, classes équilibrées).
 - Pas encore de vrais spectres de graphène et de h-BN, ni de graphène avec défauts (étape 6).
 
 ## Sources et licences des données

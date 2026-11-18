@@ -22,7 +22,7 @@ figures/
 
 ## Dataset v2 (équilibré, prêt pour l'apprentissage)
 
-Voir `data/v2/README_v2.md` : 3750 spectres simulés « comme mesurés », 1250 par famille, séparés en train / test.
+Voir `data/v2/README_v2.md` : 3750 spectres simulés « comme mesurés », 1250 par famille, en 3 plis **groupés par matériau** (correction du 18/11/2026 : une séparation aléatoire fuit, 97 % au lieu de 35 %). Prétraitement et chargement recommandés : `scripts/pretraitement.py`.
 
 ## Dataset v3 (simulé + 521 spectres mesurés)
 
