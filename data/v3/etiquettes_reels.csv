@@ -1,0 +1,522 @@
+famille,source,materiau,structure,temperature_K,excitation_nm,excitation_eV,cm1_min,cm1_max,traite_par_auteurs
+TMD,Southampton_WS2_2018,WS2,monocouche,4,578.95,2.1415,160.7,814.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,581.56,2.1319,158.6,732.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,584.19,2.1223,157.0,723.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,585.01,2.1194,158.0,722.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,587.7,2.1097,154.6,714.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,591.66,2.0955,151.9,705.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,593.46,2.0892,148.1,698.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,595.47,2.0821,143.9,690.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,597.11,2.0764,145.7,689.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,599.07,2.0696,142.1,682.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,601.4,2.0616,139.4,675.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,603.32,2.055,140.8,673.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,605.49,2.0477,141.9,671.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,607.91,2.0395,138.7,740.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,609.99,2.0326,114.5,663.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,611.28,2.0283,131.3,657.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,613.46,2.0211,113.7,651.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,615.86,2.0132,55.9,667.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,618.1,2.0059,120.6,644.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,619.09,2.0027,72.4,713.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,619.83,2.0003,26.9,720.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,622.66,1.9912,15.1,711.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,624.59,1.985,14.3,703.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,626.9,1.9777,15.9,702.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,628.74,1.9719,13.2,695.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,630.99,1.9649,11.1,687.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,632.4,1.9605,13.0,685.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,634.55,1.9539,16.0,683.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,638.38,1.9422,15.9,673.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,640.56,1.9356,13.6,666.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,4,655.74,1.8908,11.9,629.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,573.01,2.1637,13.0,857.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,575.75,2.1534,18.1,814.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,579.19,2.1406,161.0,746.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,581.57,2.1319,164.4,775.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,583.29,2.1256,156.0,724.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,585.45,2.1178,158.5,757.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,587.45,2.1105,158.9,719.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,589.25,2.1041,149.9,706.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,591.4,2.0965,152.3,705.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,593.31,2.0897,153.2,702.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,595.45,2.0822,143.3,690.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,597.15,2.0763,144.6,688.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,599.2,2.0692,146.8,686.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,601.44,2.0615,138.8,675.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,603.35,2.0549,140.8,673.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,605.33,2.0482,140.6,672.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,607.36,2.0414,142.7,719.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,609.66,2.0337,129.0,658.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,611.53,2.0274,126.4,657.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,614.17,2.0187,120.8,655.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,615.57,2.0141,12.4,643.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,617.25,2.0087,9.7,644.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,619.31,2.002,15.5,654.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,621.48,1.995,18.7,710.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,623.41,1.9888,10.9,704.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,625.54,1.982,14.0,702.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,627.44,1.976,16.7,701.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,629.29,1.9702,8.7,689.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,631.44,1.9635,11.7,687.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,635.35,1.9514,17.1,682.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,25,639.51,1.9387,12.2,667.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,579.07,2.1411,22.7,835.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,581.71,2.1314,71.4,736.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,583.43,2.1251,156.2,724.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,585.08,2.1191,158.0,761.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,587.21,2.1114,159.8,720.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,589.4,2.1036,150.7,707.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,591.53,2.096,151.8,704.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,593.51,2.089,154.0,703.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,595.45,2.0822,144.5,690.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,597.54,2.0749,145.6,688.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,599.31,2.0688,147.5,686.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,601.53,2.0611,139.5,675.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,603.62,2.054,141.1,673.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,605.4,2.048,137.2,667.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,607.59,2.0406,123.3,665.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,609.89,2.0329,130.4,658.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,611.32,2.0281,126.2,657.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,613.25,2.0218,61.6,707.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,615.76,2.0135,104.4,642.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,617.46,2.008,114.1,644.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,619.72,2.0006,25.1,718.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,621.83,1.9939,13.9,711.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,623.7,1.9879,16.6,708.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,625.69,1.9816,14.2,702.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,627.34,1.9763,16.8,701.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,630.03,1.9679,15.0,693.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,631.67,1.9628,12.0,686.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,633.63,1.9567,14.7,683.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,50,650.68,1.9055,16.1,644.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,575.48,2.1544,17.6,850.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,579.23,2.1405,161.1,767.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,581.5,2.1321,7.3,731.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,583.37,2.1253,155.5,724.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,585.53,2.1175,62.3,722.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,587.49,2.1104,159.5,719.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,589.07,2.1047,149.7,707.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,591.33,2.0967,152.2,705.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,593.45,2.0892,153.9,702.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,595.48,2.0821,144.5,690.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,597.52,2.075,34.2,688.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,599.31,2.0688,146.9,686.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,601.31,2.0619,138.7,675.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,603.21,2.0554,40.7,673.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,605.18,2.0487,141.0,672.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,607.31,2.0415,7.9,660.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,609.48,2.0343,127.1,659.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,611.33,2.0281,123.9,657.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,613.21,2.0219,128.2,656.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,615.89,2.0131,41.0,640.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,617.38,2.0082,10.4,644.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,619.36,2.0018,15.6,641.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,621.38,1.9953,18.5,639.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,623.42,1.9888,10.9,698.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,625.18,1.9832,13.5,702.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,627.13,1.977,16.2,700.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,629.37,1.97,19.4,696.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,631.44,1.9635,11.7,685.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,633.54,1.957,14.6,684.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,635.39,1.9513,17.1,680.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,75,639.54,1.9386,12.2,667.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,579.59,2.1392,14.5,829.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,580.72,2.135,16.5,825.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,582.86,2.1272,9.7,729.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,584.93,2.1196,156.6,723.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,586.97,2.1123,158.9,720.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,589.08,2.1047,149.1,707.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,591.45,2.0963,152.3,705.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,593.33,2.0896,154.4,703.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,595.6,2.0817,145.3,691.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,597.05,2.0766,146.3,689.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,599.25,2.069,147.4,716.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,601.72,2.0605,139.7,675.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,603.19,2.0555,140.7,673.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,605.23,2.0485,137.6,667.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,607.19,2.0419,137.4,728.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,609.82,2.0331,128.6,659.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,611.85,2.0264,122.2,726.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,613.88,2.0197,120.9,650.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,615.57,2.0141,104.0,644.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,617.61,2.0075,43.7,644.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,619.89,2.0001,115.4,640.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,621.57,1.9947,17.4,667.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,623.71,1.9879,16.6,708.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,625.44,1.9824,16.6,702.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,627.85,1.9747,17.3,700.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,629.78,1.9687,14.7,693.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,631.8,1.9624,12.2,686.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,633.35,1.9576,14.4,684.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,635.39,1.9513,11.9,677.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,637.48,1.9449,14.7,674.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,100,641.6,1.9324,14.9,664.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,578.92,2.1416,13.3,839.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,580.8,2.1347,16.6,827.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,583.05,2.1265,10.0,814.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,584.94,2.1196,41.6,753.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,587.18,2.1115,158.5,786.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,589.05,2.1048,149.6,708.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,590.92,2.0982,152.3,706.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,591.69,2.0954,134.1,705.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,592.94,2.091,154.0,703.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,593.83,2.0879,154.9,702.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,594.97,2.0839,145.2,691.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,595.47,2.0821,10.0,691.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,597.08,2.0765,24.3,689.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,599.29,2.0689,137.9,687.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,601.51,2.0612,140.1,675.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,603.64,2.0539,142.3,673.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,604.65,2.0505,137.6,700.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,607.6,2.0406,140.1,665.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,610.07,2.0323,132.3,658.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,611.39,2.0279,132.0,657.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,612.82,2.0232,131.8,660.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,615.28,2.0151,76.6,644.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,617.4,2.0082,126.8,644.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,619.46,2.0015,110.0,640.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,621.54,1.9948,134.7,639.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,623.48,1.9886,11.0,627.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,625.25,1.983,13.6,626.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,627.39,1.9762,16.6,696.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,629.28,1.9703,52.7,622.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,150,631.33,1.9639,12.1,610.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,581.32,2.1328,17.5,835.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,583.7,2.1241,11.2,820.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,585.24,2.1185,13.9,819.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,587.37,2.1108,17.5,815.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,589.15,2.1045,10.0,803.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,591.34,2.0967,13.7,798.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,593.39,2.0894,17.2,786.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,595.42,2.0823,10.0,711.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,597.29,2.0758,145.9,693.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,599.25,2.069,148.6,687.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,601.38,2.0617,9.1,676.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,603.31,2.0551,141.4,673.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,605.42,2.0479,144.2,672.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,607.21,2.0419,146.1,671.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,609.36,2.0347,137.9,659.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,611.54,2.0274,139.5,657.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,613.47,2.021,140.9,655.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,615.16,2.0155,130.5,643.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,617.4,2.0082,126.6,641.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,619.38,2.0017,106.0,641.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,621.26,1.9957,111.4,638.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,623.21,1.9894,10.6,627.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,625.07,1.9835,13.3,625.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,627.27,1.9766,16.4,625.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,629.35,1.97,19.4,673.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,631.31,1.9639,11.5,677.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,633.23,1.958,14.2,684.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,635.38,1.9513,17.1,680.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,637.23,1.9457,19.6,679.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,639.12,1.9399,11.6,667.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,640.93,1.9344,14.0,665.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,643.02,1.9282,16.8,663.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,644.97,1.9223,19.3,660.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,200,647.2,1.9157,11.7,648.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,581.42,2.1324,17.7,835.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,585.14,2.1189,13.7,819.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,587.53,2.1103,17.8,813.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,589.48,2.1033,10.6,803.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,591.19,2.0972,16.0,800.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,593.32,2.0897,17.1,794.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,595.38,2.0824,9.9,779.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,597.1,2.0764,39.6,746.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,599.33,2.0687,147.5,767.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,601.14,2.0625,139.7,681.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,603.01,2.0561,142.2,674.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,605.36,2.0481,144.7,673.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,607.35,2.0414,146.8,671.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,609.54,2.0341,138.1,659.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,611.59,2.0272,140.2,658.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,613.19,2.022,42.8,656.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,615.14,2.0155,133.1,644.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,617.38,2.0082,9.3,645.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,618.78,2.0037,133.6,642.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,619.08,2.0027,134.5,640.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,621.13,1.9961,135.9,638.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,623.21,1.9894,10.6,627.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,625.15,1.9833,13.4,625.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,626.97,1.9775,123.2,623.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,629.05,1.971,119.9,622.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,631.31,1.9639,11.5,609.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,633.05,1.9585,13.9,608.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,635.13,1.9521,16.8,608.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,637.11,1.946,19.5,678.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,639.1,1.94,11.6,667.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,640.79,1.9349,13.9,665.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,644.94,1.9224,19.3,660.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,647.01,1.9163,11.4,648.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,649.1,1.9101,14.1,646.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,655.45,1.8916,11.6,629.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,250,657.48,1.8857,14.1,627.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,581.06,2.1338,11.8,831.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,584.67,2.1206,12.9,820.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,587.19,2.1115,11.9,811.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,588.9,2.1054,9.6,803.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,590.81,2.0985,12.8,800.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,592.78,2.0916,10.9,793.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,594.9,2.0841,9.1,785.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,596.89,2.0772,12.4,780.3,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,598.75,2.0707,10.7,771.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,601.2,2.0623,8.8,763.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,603.83,2.0533,141.9,688.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,605.46,2.0478,10.3,669.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,607.87,2.0396,84.2,666.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,610.3,2.0315,140.0,659.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,611.59,2.0272,141.3,657.8,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,613.82,2.0199,137.2,651.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,615.7,2.0137,134.2,644.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,618.01,2.0062,133.3,724.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,620.42,1.9984,136.9,641.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,621.78,1.994,131.4,700.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,623.97,1.987,35.4,626.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,625.42,1.9824,123.8,625.2,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,627.2,1.9768,116.6,619.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,629.39,1.9699,118.7,617.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,631.73,1.9626,12.7,609.4,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,633.54,1.957,38.0,608.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,635.43,1.9512,15.6,669.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,637.67,1.9443,15.0,671.6,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,639.67,1.9383,12.4,664.9,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,641.45,1.9329,14.7,665.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,643.54,1.9266,12.2,657.7,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,645.36,1.9212,14.6,655.5,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,647.62,1.9145,12.2,648.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,649.37,1.9093,14.5,646.0,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,651.18,1.904,11.5,639.1,False
+TMD,Southampton_WS2_2018,WS2,monocouche,295,653.41,1.8975,14.3,635.2,False
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,780.27,1.589,70.2,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,777.35,1.595,69.9,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,774.33,1.6012,70.0,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,771.26,1.6076,70.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,768.33,1.6137,70.2,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,765.28,1.6201,70.1,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,762.32,1.6264,70.1,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,760.3,1.6307,69.9,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,758.3,1.635,70.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,756.34,1.6393,70.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,754.31,1.6437,69.8,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,752.36,1.6479,70.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,750.28,1.6525,70.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,748.34,1.6568,69.8,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,746.4,1.6611,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,744.32,1.6657,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,742.36,1.6701,70.0,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,740.38,1.6746,70.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,738.36,1.6792,70.4,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,736.28,1.6839,69.9,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,734.4,1.6882,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,732.33,1.693,70.0,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,730.4,1.6975,70.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,728.35,1.7023,70.2,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,726.41,1.7068,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,724.39,1.7116,69.9,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,722.39,1.7163,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,720.37,1.7211,70.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,718.39,1.7259,70.1,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,716.33,1.7308,70.0,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,714.37,1.7356,70.1,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,712.43,1.7403,70.2,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,710.37,1.7453,69.9,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,708.37,1.7503,70.2,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,706.41,1.7551,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,704.49,1.7599,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,701.82,1.7666,70.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,699.64,1.7721,69.9,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,697.59,1.7773,70.0,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,695.69,1.7822,69.9,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,693.77,1.7871,70.0,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,691.71,1.7924,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,689.71,1.7976,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,687.8,1.8026,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,685.74,1.808,70.1,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,683.8,1.8132,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,681.54,1.8192,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,679.57,1.8245,93.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,677.63,1.8297,94.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,675.64,1.8351,92.9,629.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,673.55,1.8408,91.3,629.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,671.65,1.846,89.2,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,669.55,1.8518,96.4,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,667.71,1.8569,93.7,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,665.7,1.8625,91.0,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,663.82,1.8677,84.4,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,661.67,1.8738,70.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,659.6,1.8797,69.9,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,657.6,1.8854,70.2,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,655.63,1.8911,70.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,653.52,1.8972,70.8,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,651.77,1.9023,70.1,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,649.49,1.9089,69.9,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,647.64,1.9144,70.0,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,645.64,1.9203,70.1,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,643.69,1.9261,70.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,641.66,1.9322,69.9,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,639.55,1.9386,69.9,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,635.35,1.9514,69.8,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,631.41,1.9636,69.9,649.5,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,627.93,1.9745,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,623.75,1.9877,70.2,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,619.67,2.0008,70.5,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,615.68,2.0138,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,611.8,2.0265,70.1,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,607.84,2.0398,70.2,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,603.5,2.0544,69.8,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,598.98,2.0699,70.2,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,595.59,2.0817,70.0,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,591.57,2.0958,70.2,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,589.91,2.1017,69.9,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,587.82,2.1092,69.9,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,587.69,2.1097,69.9,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,585.71,2.1168,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,583.91,2.1233,70.2,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,581.72,2.1313,70.0,650.3,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,579.67,2.1389,69.9,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,577.87,2.1455,69.8,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,575.86,2.153,70.2,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,573.65,2.1613,69.8,650.0,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,571.68,2.1688,69.8,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,569.77,2.176,69.8,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,567.84,2.1834,69.7,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,565.63,2.192,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,563.75,2.1993,70.0,649.8,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,561.39,2.2085,70.2,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,559.53,2.2159,70.1,650.2,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,557.75,2.2229,70.1,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,555.63,2.2314,70.0,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,553.3,2.2408,70.1,649.9,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,551.33,2.2488,70.0,650.1,True
+TMD,Southampton_HS20_2021,MoSe2/WSe2,"hétérobicouche (HS20), encapsulée hBN",4,549.44,2.2566,70.1,650.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,547.75,2.2635,3.9,740.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,549.71,2.2554,2.6,732.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,551.56,2.2479,4.9,729.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,553.87,2.2385,4.1,721.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,555.8,2.2307,4.2,715.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,557.78,2.2228,4.3,709.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,559.63,2.2155,4.6,703.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,561.75,2.2071,3.8,696.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,563.68,2.1995,3.3,690.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,565.67,2.1918,3.5,684.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,567.92,2.1831,3.9,678.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,569.7,2.1763,2.9,672.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,571.72,2.1686,4.1,667.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,572.84,2.1644,4.3,664.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,573.67,2.1612,3.4,661.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,574.91,2.1566,3.6,658.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,575.87,2.153,3.1,655.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,576.74,2.1497,3.5,652.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,577.79,2.1458,2.6,649.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,579.7,2.1388,3.9,645.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,581.67,2.1315,3.2,639.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,583.69,2.1241,7.0,637.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,585.72,2.1168,6.5,631.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,585.81,2.1165,4.8,629.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,585.92,2.1161,5.1,629.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,587.84,2.1091,4.7,624.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,587.99,2.1086,6.7,625.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,589.76,2.1023,7.1,621.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,589.87,2.1019,7.0,620.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,592.01,2.0943,5.2,613.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,595.68,2.0814,5.2,604.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,597.71,2.0743,4.5,598.3,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,601.83,2.0601,9.7,588.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,605.71,2.0469,3.9,1247.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,609.63,2.0338,5.9,1243.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,613.45,2.0211,5.0,1238.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,617.83,2.0068,4.5,1233.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,621.78,1.994,4.4,1229.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,625.83,1.9811,4.4,1225.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,629.81,1.9686,5.4,1220.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,633.94,1.9558,3.7,1216.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,639.79,1.9379,5.3,1130.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,644.77,1.9229,59.9,1089.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,649.12,1.91,53.0,1076.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,651.65,1.9026,52.1,1099.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,654.51,1.8943,52.7,1485.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,656.97,1.8872,50.7,1482.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,659.59,1.8797,43.2,1481.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,662.0,1.8729,46.3,1477.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,665.07,1.8642,44.5,1475.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,666.89,1.8591,40.4,1045.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,669.53,1.8518,41.4,1040.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,672.4,1.8439,43.3,1021.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,675.07,1.8366,41.6,1012.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,677.01,1.8313,38.8,1011.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,679.74,1.824,39.3,993.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,682.4,1.8169,37.4,979.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,684.8,1.8105,38.3,979.3,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,687.49,1.8034,38.1,974.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,690.01,1.7968,38.0,964.3,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,692.23,1.7911,40.5,961.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,694.95,1.7841,34.8,939.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,696.98,1.7789,36.9,919.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,699.85,1.7716,39.1,919.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,702.33,1.7653,39.0,915.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,705.35,1.7578,31.2,902.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,707.26,1.753,36.6,901.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,709.81,1.7467,36.0,910.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,712.23,1.7408,0.3,651.3,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,714.23,1.7359,1.6,649.9,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,716.19,1.7312,1.2,649.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,718.21,1.7263,3.1,648.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,720.27,1.7214,3.9,647.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,722.25,1.7166,2.1,645.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,724.21,1.712,2.1,643.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,726.21,1.7073,2.2,642.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,728.23,1.7025,1.6,640.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,730.19,1.698,1.9,638.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,732.23,1.6932,0.7,637.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,734.21,1.6887,2.2,635.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,736.21,1.6841,1.2,631.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,738.23,1.6795,1.3,632.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,740.26,1.6749,2.2,631.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,742.26,1.6704,2.0,629.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,743.21,1.6682,1.9,647.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,744.28,1.6658,1.0,628.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,745.22,1.6637,1.5,646.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,746.22,1.6615,1.8,626.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,747.2,1.6593,1.3,644.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,748.2,1.6571,1.0,624.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,749.2,1.6549,0.4,642.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,750.22,1.6526,1.3,622.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,751.24,1.6504,1.0,640.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,752.2,1.6483,2.2,621.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,753.18,1.6461,1.7,638.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,754.22,1.6439,0.1,619.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,755.16,1.6418,0.6,636.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,756.18,1.6396,2.2,617.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,757.24,1.6373,1.5,636.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,758.22,1.6352,1.9,616.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,758.66,1.6343,0.8,634.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,759.2,1.6331,3.0,615.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,759.72,1.632,0.7,634.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,760.13,1.6311,1.4,615.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,760.64,1.63,0.9,632.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,761.14,1.6289,0.8,614.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,761.74,1.6276,1.1,632.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,762.18,1.6267,0.3,613.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,762.68,1.6256,0.3,631.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,763.18,1.6246,0.9,612.4,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,763.74,1.6234,0.1,631.3,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,764.16,1.6225,0.7,612.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,764.62,1.6215,0.1,630.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,765.11,1.6205,1.2,611.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,765.62,1.6194,0.2,629.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,766.16,1.6183,0.3,629.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,766.68,1.6172,0.1,628.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,767.12,1.6162,-0.1,628.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,767.62,1.6152,-0.0,628.5,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,768.12,1.6141,0.1,627.8,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,768.61,1.6131,0.4,627.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,769.14,1.612,0.1,627.6,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,769.66,1.6109,0.5,627.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,770.16,1.6098,0.1,626.7,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,771.14,1.6078,0.5,626.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,772.2,1.6056,1.6,625.3,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,774.09,1.6017,0.9,624.0,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,776.18,1.5974,4.4,623.2,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,778.16,1.5933,3.1,622.1,True
+TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,780.1,1.5893,3.1,620.6,True

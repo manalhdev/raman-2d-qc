@@ -1,0 +1,90 @@
+# raman-2d-qc — AI-Assisted Raman Analysis for 2D Electronic Device Quality Control
+
+Projet d'Innovation Industrielle (PI²) n°156 — ESILV, octobre 2026 à avril 2027.
+Encadrante : Sabrine Ayari. Équipe de 5 étudiants.
+
+**Objectif** : une plateforme d'IA qui prend un spectre Raman d'un matériau 2D et répond à deux questions :
+**quel matériau est-ce** (graphène / carbone, h-BN, dichalcogénures de métaux de transition TMD) et
+**est-il de bonne qualité**.
+
+> État : construction des données (novembre 2026). Les modèles, l'indicateur de qualité et l'application web
+> viendront ensuite.
+
+## Démarche (6 étapes du sujet)
+
+1. Prétraitement : ligne de base, débruitage, normalisation, grille commune
+2. Détection des pics et extraction de caractéristiques physiques
+3. Classification du matériau et de sa famille (carbone, h-BN, TMD)
+4. Comparaison de modèles : KNN, SVM, Random Forest, réseau de neurones, CNN 1D
+5. Tests de robustesse : bruit, décalages spectraux, variations d'intensité
+6. Indicateur de qualité du graphène à partir des bandes D, G et 2D
+
+## Contenu du dépôt
+
+```
+data/
+  sources/   fichiers d'origine téléchargés (voir « Sources et licences »)
+  v1/        133 spectres calculés (3 familles) + métadonnées des 3504 matériaux + mesures MoS2 (Zenodo)
+  v2/        3750 spectres simulés « comme mesurés », équilibrés, séparés train / test
+  v3/        v2 + 521 spectres Raman MESURÉS (test_reel)   <- dataset à utiliser
+scripts/     extraction, augmentation, assemblage, vérifications (Python)
+figures/     figures de contrôle
+docs/        README_dataset.md : description détaillée des données
+rapports/    rapports de suivi hebdomadaires (Word)
+```
+
+Détails : [`docs/README_dataset.md`](docs/README_dataset.md), [`data/v2/README_v2.md`](data/v2/README_v2.md),
+[`data/v3/README_v3.md`](data/v3/README_v3.md).
+
+## Démarrage rapide
+
+```bash
+pip install -r requirements.txt
+```
+```python
+import numpy as np, pandas as pd
+d = np.load("data/v3/spectres_v3.npz"); X, grid = d["X"], d["grid"]   # (4271, 3101), 100 -> 3200 cm-1
+lab = pd.read_csv("data/v3/etiquettes_v3.csv")
+train, test, test_reel = (lab.split == s for s in ["train", "test", "test_reel"])
+```
+`X` contient des NaN là où un spectre mesuré n'a pas de donnée.
+
+## Reproduire les données
+
+```bash
+python scripts/extract_materials_cloud.py --zip data/sources/materials_cloud_2024.148_data.zip --out data/v1/
+python scripts/extract_zenodo_features.py --zip data/sources/zenodo_17311728_Dataset.zip --out data/v1/
+python scripts/augmenter_dataset.py --dataset data/v1/ --out data/v2/ --seed 0
+python scripts/extract_soton.py --ws2 data/sources/southampton_D0371_WS2_RRS_Spectra.xlsx \
+    --hs20 data/sources/southampton_D1747_HS20_Data.xlsx --hs57 data/sources/southampton_D1747_HS57_Data.xlsx --out data/v3/
+python scripts/assembler_v3.py --v2 data/v2/ --v3 data/v3/
+# vérifications et figures
+python scripts/figures_controle.py --dataset data/v1/ --out figures/
+python scripts/verifier_v2.py --dataset data/v2/ --out figures/
+python scripts/verifier_v3.py --v2 data/v2/ --v3 data/v3/ --out figures/
+```
+Vérifié le 18/11/2026 : cette suite redonne à l'identique les fichiers de `data/v1`, `data/v2` et `data/v3`.
+
+## Principaux constats à ce stade
+
+- Base calculée très déséquilibrée : 127 TMD, 3 carbone, 3 h-BN ; aucune monocouche de MoS₂ 2H.
+- Fréquences calculées décalées par rapport aux mesures (graphène : G à 1443 contre ≈1580 cm⁻¹) : recalage dans le v2.
+- Un modèle entraîné sur des spectres simulés reconnaît 10 % des vrais spectres de WS₂ sans prétraitement,
+  69 % avec une simple soustraction de ligne de base : **le prétraitement est décisif**.
+- Pas encore de vrais spectres de graphène et de h-BN, ni de graphène avec défauts (étape 6).
+
+## Sources et licences des données
+
+| Source | Contenu | Licence |
+|---|---|---|
+| Li, G. et al. (2024), Materials Cloud Archive 2024.148, DOI 10.24435/materialscloud:bq-vp | Spectres Raman calculés de 3504 matériaux 2D | CC BY 4.0 |
+| Kurtash (2025), Zenodo, DOI 10.5281/zenodo.17311728 | Mesures de MoS₂ (positions de pics, contrainte, dopage) | CC BY 4.0 |
+| McDonnell, L. et al. (2018), University of Southampton, DOI 10.5258/SOTON/D0371 | Spectres Raman mesurés de WS₂ monocouche | CC BY 4.0 |
+| Viner, J., McDonnell, L., Smith, D. (2021), University of Southampton, DOI 10.5258/SOTON/D1747 | Spectres Raman mesurés d'hétérostructures MoSe₂/WSe₂ | CC BY 4.0 |
+
+Les fichiers de `data/sources/` sont redistribués tels quels sous leur licence d'origine ; les jeux dérivés
+(`data/v1` à `data/v3`) restent soumis à l'attribution de ces sources.
+
+## Licence du code
+
+Code (`scripts/`) sous licence MIT, voir [`LICENSE`](LICENSE).
