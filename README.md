@@ -125,6 +125,7 @@ Exemples dans `demo/exemples/`.
 Les fichiers de `data/sources/` sont redistribués tels quels sous leur licence d'origine ; les jeux dérivés
 (`data/v1` à `data/v3`) restent soumis à l'attribution de ces sources.
 
+| Lafuente, B. et al. (2015), RRUFF Project, échantillons R050503, R090047, R120025 (graphite), R050209, R060124 (MoS₂), R070616 (WS₂) | 6 spectres Raman bruts mesurés sur minéraux massifs (532 nm) : 3 graphite, 2 MoS₂, 1 WS₂ | Citation demandée ; licence à vérifier |
 ## Licence du code
 
 Code (`scripts/`) sous licence MIT, voir [`LICENSE`](LICENSE).
