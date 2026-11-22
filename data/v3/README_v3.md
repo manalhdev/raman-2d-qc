@@ -77,6 +77,31 @@ Ce qu'il faut en retenir :
 3. Sur 100-620 cm⁻¹, carbone et h-BN n'ont aucun pic propre (G à 1580, h-BN à 1367) : ces chiffres mesurent
    surtout « TMD ou pas TMD ». La normalisation sans silicium ne change pas ces scores.
 
+## Mise à jour du 22/11/2026 — prétraitement finalisé (to-do item 2)
+
+`scripts/pretraitement.py` utilise maintenant une vraie correction de ligne de base **ALS**
+(Asymmetric Least Squares, Eilers & Boelens 2005) au lieu de la soustraction de percentile
+provisoire, plus un **débruitage Savitzky-Golay** (fenêtre 11, ordre 3) — les deux appliqués
+uniquement sur la plage réellement mesurée de chaque spectre (pas d'extrapolation au-delà,
+pour éviter un artefact de bord). Nouvelles fonctions : `als_baseline`, `corriger_ligne_base`,
+`debruiter`. `normaliser_sans_si`/`preparer`/`charger` ont la même interface qu'avant.
+
+Figure avant/après pour le rapport : `python scripts/figure_avant_apres.py --v3 data/v3/ --out
+figures/` → `figures/avant_apres_pretraitement.png` (spectre WS₂ réel, 3 étapes : brut → ligne
+de base ALS + débruité → normalisé).
+
+**À noter en marge, visible sur cette figure** : les spectres WS₂ de Southampton ont une marche
+nette juste avant/après leur plage mesurée (ex. ~140 et ~625 cm⁻¹) — c'est réel, pas un
+artefact de notre code : il s'agit très probablement de la coupure du filtre notch du
+spectromètre (cf. guide Raman du projet, Questions 31/34/37). L'ALS suit cette marche et
+produit un petit rebond de part et d'autre ; attendu, à mentionner si la figure est reprise
+dans le rapport.
+
+Performance (indicatif, une machine de bureau) : `charger("data/v3", jeu="test_reel")` (521
+spectres) ≈ 4 s ; `charger("data/v3", jeu="cv")` (3750 spectres simulés) ≈ 110 s. Recalculé à
+chaque appel pour l'instant — à mettre en cache (ex. `np.save`) si ça devient gênant en boucle
+d'entraînement/validation croisée (item 3 du to-do).
+
 ## Limites qui restent
 
 - Spectres réels : **uniquement des TMD**. Toujours aucun vrai spectre de graphène ni de h-BN.
