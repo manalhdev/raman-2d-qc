@@ -27,8 +27,10 @@ data/
   v1/        133 spectres calculés (3 familles) + métadonnées des 3504 matériaux + mesures MoS2 (Zenodo)
   v2/        3750 spectres simulés « comme mesurés », équilibrés, en 3 plis groupés par matériau
   v3/        v2 + 521 spectres Raman MESURÉS (test_reel)   <- dataset à utiliser
-scripts/     extraction, augmentation, assemblage, vérifications (Python)
-figures/     figures de contrôle
+scripts/     extraction, augmentation, assemblage, vérifications, modèles, figures (Python)
+figures/     figures du rapport (fig01 à fig10) et figures de contrôle
+resultats/   tableaux de résultats (CSV) et prédictions détaillées
+demo/        application de démonstration (Streamlit) et spectres d'exemple
 docs/        README_dataset.md : description détaillée des données
 rapports/    rapports de suivi hebdomadaires (Word)
 ```
@@ -84,6 +86,32 @@ Vérifié le 18/11/2026 : cette suite redonne à l'identique les fichiers de `da
 - Prétraitement recommandé (`scripts/pretraitement.py`) : normalisation sans le pic du silicium, fenêtres
   100-1800 et 2500-2850 cm⁻¹ ; ni imputation ni SMOTE (pas de NaN dans le simulé, classes équilibrées).
 - Pas encore de vrais spectres de graphène et de h-BN, ni de graphène avec défauts (étape 6).
+
+## Résultats au 22/11/2026 (premier jet)
+
+```bash
+python scripts/analyse_decalages.py --racine .      # décalage théorique / mesuré -> resultats/decalages_pics.csv
+python scripts/comparer_modeles.py --racine .       # 6 modèles x 2 prétraitements x 3 évaluations (~10 min)
+python scripts/figures_donnees.py --racine .        # figures 01, 03, 09, 10
+python scripts/figures_resultats.py --racine .      # figures 04 à 08
+```
+
+- Validation aléatoire 92-100 %, validation groupée par matériau 33-60 % : la fuite par matériau concerne tous les modèles.
+- Carbone et h-BN (3 matériaux chacun) ne sont presque jamais reconnus sur un matériau nouveau : il faut plus de matériaux.
+- Ligne de base SNIP + SVM : 99,6 % sur les 521 spectres mesurés (TMD seulement), contre 89,6 % sans.
+- Fréquences calculées toutes trop basses de 7 à 137 cm⁻¹ (1 à 9 %), décalage différent selon le matériau et le mode.
+
+Figures (PNG 300 dpi + SVG, style commun `scripts/style_figures.py`) : `figures/fig01` à `fig10`.
+
+## Démo
+
+```bash
+pip install -r requirements.txt
+python scripts/entrainer_modele_demo.py --racine . --modele "SVM (RBF)" --pretraitement ligne_base
+streamlit run demo/app.py
+```
+On dépose un spectre (CSV/TXT : nombre d'onde, intensité) ; l'appli affiche la famille prédite, la confiance et les pics détectés.
+Exemples dans `demo/exemples/`.
 
 ## Sources et licences des données
 
