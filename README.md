@@ -87,19 +87,32 @@ Vérifié le 18/11/2026 : cette suite redonne à l'identique les fichiers de `da
   100-1800 et 2500-2850 cm⁻¹ ; ni imputation ni SMOTE (pas de NaN dans le simulé, classes équilibrées).
 - Pas encore de vrais spectres de graphène et de h-BN, ni de graphène avec défauts (étape 6).
 
-## Résultats au 22/11/2026 (premier jet)
+## Résultats au 23/11/2026 (reproduits, versions figées)
 
 ```bash
+pip install -r requirements.txt                     # versions figées depuis le 23/11/2026 (voir note reproductibilité)
 python scripts/analyse_decalages.py --racine .      # décalage théorique / mesuré -> resultats/decalages_pics.csv
 python scripts/comparer_modeles.py --racine .       # 6 modèles x 2 prétraitements x 3 évaluations (~10 min)
 python scripts/figures_donnees.py --racine .        # figures 01, 03, 09, 10
 python scripts/figures_resultats.py --racine .      # figures 04 à 08
 ```
 
-- Validation aléatoire 92-100 %, validation groupée par matériau 33-60 % : la fuite par matériau concerne tous les modèles.
+⚠️ **Note reproductibilité (23/11/2026)** : `requirements.txt` ne fixait aucune version. Une
+ré-exécution avec le même code et les mêmes données, mais des versions de librairies plus
+récentes, donnait des écarts de 10 à 20 points sur le score groupé pour KNN, la régression
+logistique et le MLP (modèles sensibles à de petites différences numériques) ; SVM, Random
+Forest et XGBoost restaient stables. Versions désormais figées dans `requirements.txt` ;
+chiffres ci-dessous recalculés avec ces versions exactes. Les anciens chiffres (premier jet,
+versions non figées) restent dans l'historique git pour mémoire mais ne doivent plus être
+cités tels quels.
+
+- Validation aléatoire 99-100 %, validation groupée par matériau **33 à 62 %** : la fuite par matériau concerne tous les modèles.
 - Carbone et h-BN (3 matériaux chacun) ne sont presque jamais reconnus sur un matériau nouveau : il faut plus de matériaux.
-- Ligne de base SNIP + SVM : 99,6 % sur les 521 spectres mesurés (TMD seulement), contre 89,6 % sans.
-- Fréquences calculées toutes trop basses de 7 à 137 cm⁻¹ (1 à 9 %), décalage différent selon le matériau et le mode.
+- SVM atteint 100 % sur les 521 spectres mesurés (TMD seulement), avec ou sans la ligne de base
+  SNIP en plus — l'écart précédemment observé entre les deux (89,6 % vs 99,6 %) ne se reproduit
+  plus avec les versions figées ; probablement lié à l'instabilité numérique ci-dessus, à
+  garder à l'esprit avant de conclure que SNIP apporte un gain pour SVM.
+- Fréquences calculées toutes trop basses de 7 à 137 cm⁻¹ (1 à 9 %), décalage différent selon le matériau et le mode (inchangé).
 
 Figures (PNG 300 dpi + SVG, style commun `scripts/style_figures.py`) : `figures/fig01` à `fig10`.
 
