@@ -29,6 +29,8 @@ data/
   v3/        v2 + 521 spectres Raman MESURÉS (test_reel)   <- dataset à utiliser
 scripts/     extraction, augmentation, assemblage, vérifications, modèles, figures (Python)
 figures/     figures du rapport (fig01 à fig10) et figures de contrôle
+src/raman_qc/  pipeline des modèles de la shortlist (ALS, pics, XGBoost, TabPFN, CNN 1D, conforme, hors domaine)
+notebooks/   Modeles_Raman_v3.ipynb : shortlist sur le v3, exécuté (sorties dans resultats/shortlist_v3/)
 resultats/   tableaux de résultats (CSV) et prédictions détaillées
 demo/        application de démonstration (Streamlit) et spectres d'exemple
 docs/        README_dataset.md : description détaillée des données
@@ -103,6 +105,31 @@ python scripts/figures_resultats.py --racine .      # figures 04 à 08
 
 Figures (PNG 300 dpi + SVG, style commun `scripts/style_figures.py`) : `figures/fig01` à `fig10`.
 
+## Modèles de la shortlist sur le v3 (`src/raman_qc`, notebook)
+
+```bash
+pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute notebooks/Modeles_Raman_v3.ipynb   # ~5 min CPU -> resultats/shortlist_v3/
+cd src && python -m raman_qc.pipeline entrainer                               # modèles finaux dans modeles/
+python -m raman_qc.pipeline analyser ../demo/exemples/mesure_WS2_4K.csv       # famille, ensemble 95 %, alerte hors domaine
+```
+
+| Modèle (ligne de base ALS) | Validation aléatoire | Validation groupée (matériaux inconnus) | Spectres réels (521 TMD, 100-620 cm⁻¹) |
+|---|---|---|---|
+| XGBoost sur 8 pics (position, hauteur, largeur) | 98,9 % | **73,1 %** (carbone 67, h-BN 53, TMD 99) | 79 % |
+| XGBoost sur le spectre | 99,6 % | 33,8 % (carbone 2, h-BN 0, TMD 100) | 86 % |
+| CNN 1D, ensemble de 3 | 94,9 % | 51,0 % | 87 % |
+| TabPFN | non exécuté (licence Hugging Face à accepter, cellule prête) | | |
+
+- Les features de pics sont les seules à bien se transférer à un matériau nouveau ; une courbe du notebook montre
+  qu'il faut ~20 matériaux par famille pour dépasser 90 % (carbone et h-BN n'en ont que 3).
+- Ligne de base ALS : WS₂ réel brut de 19 % à 82 % (XGBoost spectre). Le SVM + SNIP de `comparer_modeles.py`
+  reste meilleur sur le réel (99,6 %).
+- Prédiction conforme calibrée sur un pli de matériaux non vus : couverture 91 % sur matériaux inconnus contre 59 %
+  avec la calibration aléatoire habituelle ; 88 % sur le réel.
+- Hors domaine : distance cosinus au plus proche voisin (AUC 0,96 à 1,0) bien meilleure que l'Isolation Forest (0,63 à 0,83).
+- Données classées théorique (DFT, simulé) / expérimental (brut, traité, positions de pics) : `resultats/shortlist_v3/catalogue_donnees.csv`.
+
 ## Démo
 
 ```bash
@@ -129,4 +156,4 @@ Les fichiers de `data/sources/` sont redistribués tels quels sous leur licence 
 
 ## Licence du code
 
-Code (`scripts/`) sous licence MIT, voir [`LICENSE`](LICENSE).
+Code (`scripts/`, `src/`) sous licence MIT, voir [`LICENSE`](LICENSE).

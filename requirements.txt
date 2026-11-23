@@ -8,3 +8,5 @@ openpyxl
 xgboost
 joblib
 streamlit
+torch            # CNN 1D (notebooks/Modeles_Raman_v3.ipynb)
+# tabpfn         # optionnel : modèle soumis à licence sur Hugging Face

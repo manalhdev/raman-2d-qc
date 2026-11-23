@@ -1,0 +1,5 @@
+question,methode,AUC
+famille inconnue (TMD),Isolation Forest,0.63013472
+famille inconnue (TMD),plus proche voisin (cosinus),1.0
+mesure réelle (hors domaine),Isolation Forest,0.8260867562380039
+mesure réelle (hors domaine),plus proche voisin (cosinus),0.9641996161228408

@@ -1,0 +1,6 @@
+categorie,source,contenu,familles,n,usage
+Théorique - calculé (DFT),Materials Cloud 2024.148 (v1),"Modes Raman calculés par DFT, élargis en spectres","carbone, h-BN, TMD",133,Spectres de référence (base des simulations)
+Théorique - simulé,"Materials_Cloud_2024.148_augmente (v2/v3, split cv)","Spectres DFT + largeur, décalage, bruit, fond, pic Si","carbone, h-BN, TMD",3750,Entraînement et validation croisée groupée
+Expérimental - brut,Southampton WS2 2018 (DOI 10.5258/SOTON/D0371),"Raman de résonance, 4-295 K, fond de photoluminescence",TMD (WS2),289,Test sur réel (le plus difficile)
+Expérimental - traité par les auteurs,Southampton HS20 + HS57 2021 (DOI 10.5258/SOTON/D1747),"Hétérobicouche MoSe2/WSe2, 4 K, fond déjà soustrait",TMD (MoSe2/WSe2),232,Test sur réel
+Expérimental - positions de pics seulement,Zenodo MoS2 (v1),"Positions E2g / A1g, contrainte, dopage (pas de spectre)",TMD (MoS2),586,Écart théorie / mesure sur les positions de pics
