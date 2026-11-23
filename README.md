@@ -26,17 +26,19 @@ data/
   sources/   fichiers d'origine téléchargés (voir « Sources et licences »)
   v1/        133 spectres calculés (3 familles) + métadonnées des 3504 matériaux + mesures MoS2 (Zenodo)
   v2/        3750 spectres simulés « comme mesurés », équilibrés, en 3 plis groupés par matériau
-  v3/        v2 + 521 spectres Raman MESURÉS (test_reel)   <- dataset à utiliser
+  v3/        v2 + 528 spectres Raman MESURÉS (test_reel), dont 7 à 532 nm (RRUFF, Mendeley)   <- dataset à utiliser
 scripts/     extraction, augmentation, assemblage, vérifications, modèles, figures (Python)
 figures/     figures du rapport (fig01 à fig10) et figures de contrôle
 src/raman_qc/  pipeline des modèles de la shortlist (ALS, pics, XGBoost, TabPFN, CNN 1D, conforme, hors domaine)
 notebooks/   Modeles_Raman_v3.ipynb : shortlist sur le v3, exécuté (sorties dans resultats/shortlist_v3/)
 resultats/   tableaux de résultats (CSV) et prédictions détaillées
 demo/        application de démonstration (Streamlit) et spectres d'exemple
-docs/        README_dataset.md : description détaillée des données
+docs/        README_dataset.md : description détaillée des données ;
+             versions_et_resultats.md : les 3 versions du dataset et tous les résultats (F1, rappel, réel...)
 rapports/    rapports de suivi hebdomadaires (Word)
 ```
 
+Versions du dataset et résultats : [`docs/versions_et_resultats.md`](docs/versions_et_resultats.md).
 Détails : [`docs/README_dataset.md`](docs/README_dataset.md), [`data/v2/README_v2.md`](data/v2/README_v2.md),
 [`data/v3/README_v3.md`](data/v3/README_v3.md).
 
@@ -56,7 +58,7 @@ import sys; sys.path.insert(0, "scripts")
 from pretraitement import charger
 from sklearn.model_selection import PredefinedSplit
 X, y, groupes, plis, lab, grille = charger("data/v3", jeu="cv")   # simulé : valider avec PredefinedSplit(plis)
-Xr, yr, *_ = charger("data/v3", jeu="test_reel")                  # 521 spectres mesurés
+Xr, yr, *_ = charger("data/v3", jeu="test_reel")                  # 528 spectres mesurés
 ```
 `X` contient des NaN là où un spectre mesuré n'a pas de donnée.
 
@@ -68,6 +70,7 @@ python scripts/extract_zenodo_features.py --zip data/sources/zenodo_17311728_Dat
 python scripts/augmenter_dataset.py --dataset data/v1/ --out data/v2/ --seed 0
 python scripts/extract_soton.py --ws2 data/sources/southampton_D0371_WS2_RRS_Spectra.xlsx \
     --hs20 data/sources/southampton_D1747_HS20_Data.xlsx --hs57 data/sources/southampton_D1747_HS57_Data.xlsx --out data/v3/
+python scripts/ajouter_reels_externes.py --sources data/sources/ --v3 data/v3/
 python scripts/assembler_v3.py --v2 data/v2/ --v3 data/v3/
 # vérifications et figures
 python scripts/figures_controle.py --dataset data/v1/ --out figures/
@@ -89,7 +92,7 @@ Vérifié le 18/11/2026 : cette suite redonne à l'identique les fichiers de `da
   100-1800 et 2500-2850 cm⁻¹ ; ni imputation ni SMOTE (pas de NaN dans le simulé, classes équilibrées).
 - Pas encore de vrais spectres de graphène et de h-BN, ni de graphène avec défauts (étape 6).
 
-## Résultats au 22/11/2026 (premier jet)
+## Résultats des 6 modèles de l'équipe (22/11, relancés le 23/11)
 
 ```bash
 python scripts/analyse_decalages.py --racine .      # décalage théorique / mesuré -> resultats/decalages_pics.csv
@@ -98,9 +101,12 @@ python scripts/figures_donnees.py --racine .        # figures 01, 03, 09, 10
 python scripts/figures_resultats.py --racine .      # figures 04 à 08
 ```
 
-- Validation aléatoire 92-100 %, validation groupée par matériau 33-60 % : la fuite par matériau concerne tous les modèles.
+Relancé le 23/11 avec les 528 spectres mesurés (dont 4 graphite) et le F1 macro / rappel par famille en plus :
+- Validation aléatoire 99-100 %, validation groupée par matériau 33-60 % (F1 macro 0,18 à 0,58) : la fuite par
+  matériau concerne tous les modèles.
 - Carbone et h-BN (3 matériaux chacun) ne sont presque jamais reconnus sur un matériau nouveau : il faut plus de matériaux.
-- Ligne de base SNIP + SVM : 99,6 % sur les 521 spectres mesurés (TMD seulement), contre 89,6 % sans.
+- SVM + SNIP : 99,4 % sur le réel, mais 1 graphite réel sur 4 seulement ; KNN, régression logistique, Random Forest
+  et MLP reconnaissent les 4. Détail : [`docs/versions_et_resultats.md`](docs/versions_et_resultats.md).
 - Fréquences calculées toutes trop basses de 7 à 137 cm⁻¹ (1 à 9 %), décalage différent selon le matériau et le mode.
 
 Figures (PNG 300 dpi + SVG, style commun `scripts/style_figures.py`) : `figures/fig01` à `fig10`.
@@ -124,7 +130,8 @@ python -m raman_qc.pipeline analyser ../demo/exemples/mesure_WS2_4K.csv       # 
 - Les features de pics sont les seules à bien se transférer à un matériau nouveau ; une courbe du notebook montre
   qu'il faut ~20 matériaux par famille pour dépasser 90 % (carbone et h-BN n'en ont que 3).
 - Ligne de base ALS : WS₂ réel brut de 19 % à 82 % (XGBoost spectre). Le SVM + SNIP de `comparer_modeles.py`
-  reste meilleur sur le réel (99,6 %).
+  a 99,4 % sur le réel mais ne reconnaît qu'1 graphite réel sur 4 (il répond presque toujours TMD).
+- 7 spectres réels à 532 nm (RRUFF + Mendeley, ajoutés le 23/11) : XGBoost pics et CNN 7/7.
 - Prédiction conforme calibrée sur un pli de matériaux non vus : couverture 91 % sur matériaux inconnus contre 59 %
   avec la calibration aléatoire habituelle ; 88 % sur le réel.
 - Hors domaine : distance cosinus au plus proche voisin (AUC 0,96 à 1,0) bien meilleure que l'Isolation Forest (0,63 à 0,83).
@@ -149,6 +156,7 @@ Exemples dans `demo/exemples/`.
 | McDonnell, L. et al. (2018), University of Southampton, DOI 10.5258/SOTON/D0371 | Spectres Raman mesurés de WS₂ monocouche | CC BY 4.0 |
 | Viner, J., McDonnell, L., Smith, D. (2021), University of Southampton, DOI 10.5258/SOTON/D1747 | Spectres Raman mesurés d'hétérostructures MoSe₂/WSe₂ | CC BY 4.0 |
 | Lafuente, B. et al. (2015), RRUFF Project, échantillons R050503, R090047, R120025 (graphite), R050209, R060124 (MoS₂), R070616 (WS₂) | 6 spectres Raman bruts mesurés sur minéraux massifs (532 nm) : 3 graphite, 2 MoS₂, 1 WS₂ | Citation demandée ; licence à vérifier |
+| Instituto Nacional de Pesquisas Espaciais, Mendeley Data, DOI 10.17632/czdwt595yp.1 | 1 spectre Raman mesuré de graphite en poudre (532 nm) | CC BY 4.0 |
 
 Les fichiers de `data/sources/` sont redistribués tels quels sous leur licence d'origine ; les jeux dérivés
 (`data/v1` à `data/v3`) restent soumis à l'attribution de ces sources.

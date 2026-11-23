@@ -3,7 +3,7 @@ Comparaison des modèles sur le dataset v3, avec trois façons d'évaluer :
 
   1. validation ALÉATOIRE (5 plis stratifiés)       -> montre la fuite par matériau (score trompeur)
   2. validation GROUPÉE par matériau (3 plis du v3) -> le vrai score sur un matériau jamais vu
-  3. test RÉEL : entraîné sur tout le simulé, testé sur les 521 spectres mesurés (tous TMD)
+  3. test RÉEL : entraîné sur tout le simulé, testé sur les 528 spectres mesurés (524 TMD, 4 graphite)
 
 Deux prétraitements :
   - "recommande"   : scripts/pretraitement.py (5e centile soustrait, normalisation sans Si, fenêtres)
@@ -24,6 +24,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import f1_score
 from sklearn.model_selection import PredefinedSplit, StratifiedKFold, cross_val_predict
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
@@ -117,14 +118,21 @@ def main(racine, rapide=False):
             proba_re = m.predict_proba(Xr)
             p_re = proba_re.argmax(1)
             ligne = dict(pretraitement=prep, modele=nom,
-                         acc_aleatoire=(p_alea == y).mean(), acc_groupee=(p_grp == y).mean())
+                         acc_aleatoire=(p_alea == y).mean(), acc_groupee=(p_grp == y).mean(),
+                         f1_macro_aleatoire=f1_score(y, p_alea, average="macro"),
+                         f1_macro_groupee=f1_score(y, p_grp, average="macro"))
             for f in FAMILLES:
                 k = enc.transform([f])[0]
                 ligne[f"groupee_{f}"] = (p_grp[y == k] == k).mean()
             ligne["acc_reel"] = (p_re == y_re).mean()
+            for f in FAMILLES:  # rappel par famille sur le réel (vide pour h-BN : aucun spectre mesuré)
+                k = enc.transform([f])[0]
+                if (y_re == k).any():
+                    ligne[f"reel_rappel_{f}"] = (p_re[y_re == k] == k).mean()
             for src in lab_re.source.unique():
                 s = (lab_re.source == src).values
-                ligne[f"reel_{src.replace('Southampton_', '').replace('_20', '_')}"] = (p_re[s] == i_tmd).mean()
+                # bonne réponse = la vraie famille de la source (plus seulement TMD depuis l'ajout du graphite)
+                ligne[f"reel_{src.replace('Southampton_', '').replace('_20', '_')}"] = (p_re[s] == y_re[s]).mean()
             ligne["temps_s"] = round(time.time() - t0)
             lignes.append(ligne)
             print({k: (round(v, 3) if isinstance(v, float) else v) for k, v in ligne.items()}, flush=True)
