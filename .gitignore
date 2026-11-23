@@ -5,3 +5,7 @@ __pycache__/
 ~$*
 *.tmp
 .env
+data/Raw/
+data/graphène_graphite_h-BN/*/
+*.zip
+data/graph*/*/
