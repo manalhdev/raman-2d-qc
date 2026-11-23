@@ -14,7 +14,9 @@ sur des mesures réelles.
 | `plis_materiaux.csv`, `parametres_simulation.json` | Repris du v2 |
 | `test_modele_reference_sur_reel.csv` | Prédictions du modèle de référence sur les 521 spectres Southampton (voir plus bas, pas refait pour les 7 ajoutés le 23/11) |
 
-Colonnes de `etiquettes_v3.csv` : `type` (simule / reel), `source`, `split` (cv / test_reel), `groupe` (le matériau), `fold` (pli 0-2 ; -1 pour le réel), `famille`,
+Colonnes de `etiquettes_v3.csv` : `type` (simule / reel), `source`, **`type_donnee`** (`theorique` = calcul DFT +
+simulation de mesure, `mesure` = spectre expérimental ; ajoutée le 23/11 à la demande du tuteur), **`detail_donnee`**
+(`calcul DFT + simulation de mesure`, `mesure brute`, `mesure traitee par les auteurs`), `split` (cv / test_reel), `groupe` (le matériau), `fold` (pli 0-2 ; -1 pour le réel), `famille`,
 `materiau`, `id_materials_cloud`, `structure`, `temperature_K`, `excitation_nm`, `cm1_min`, `cm1_max`
 (plage réellement mesurée), puis les paramètres de simulation pour les spectres simulés.
 

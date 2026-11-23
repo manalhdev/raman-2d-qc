@@ -1,6 +1,6 @@
 # Les 3 versions du dataset et les résultats des entraînements
 
-Mis à jour le 23/11/2026. Tous les chiffres viennent de fichiers du dépôt :
+Mis à jour le 23/11/2026 (colonne `type_donnee` ajoutée le soir même). Tous les chiffres viennent de fichiers du dépôt :
 `resultats/comparaison_modeles.csv` (6 modèles de l'équipe, `scripts/comparer_modeles.py`) et
 `resultats/shortlist_v3/` (modèles de la shortlist, `notebooks/Modeles_Raman_v3.ipynb`).
 
@@ -40,6 +40,24 @@ Mis à jour le 23/11/2026. Tous les chiffres viennent de fichiers du dépôt :
 | Expérimental, positions de pics seules | Zenodo MoS₂ | 586 | TMD | écart théorie / mesure |
 
 Tableau généré : `resultats/shortlist_v3/catalogue_donnees.csv`.
+
+### Colonne `type_donnee` dans le v3 (demande du tuteur)
+
+`data/v3/etiquettes_v3.csv` a deux colonnes en plus, juste après `source` (ajoutées par `scripts/assembler_v3.py`) :
+
+- `type_donnee` : `theorique` (calcul DFT + simulation de mesure) ou `mesure` (spectre expérimental) ;
+- `detail_donnee` : `calcul DFT + simulation de mesure`, `mesure brute` ou `mesure traitee par les auteurs`.
+
+| type_donnee | detail_donnee | carbone | h-BN | TMD | Total |
+|---|---|---|---|---|---|
+| theorique | calcul DFT + simulation de mesure | 1250 (3 matériaux) | 1250 (3) | 1250 (127) | 3750 |
+| mesure | mesure brute | 4 (graphite) | 0 | 292 (WS₂ 290, MoS₂ 2) | 296 |
+| mesure | mesure traitee par les auteurs | 0 | 0 | 232 (MoSe₂/WSe₂) | 232 |
+
+Par matériau (`resultats/shortlist_v3/comptage_par_materiau_et_type.csv`, 75 formules) : seuls **WS₂ et MoS₂**
+ont à la fois du théorique (20 spectres simulés chacun, 2 structures) et du mesuré (290 et 2 spectres). Le graphite
+mesuré n'a pas d'équivalent exact dans le théorique (les 3 carbones calculés sont le graphène et 2 polymorphes), et
+l'hétérobicouche MoSe₂/WSe₂ mesurée n'existe qu'en monocouches séparées dans le théorique. Aucun h-BN mesuré.
 
 ### Écart entre théorie et mesure
 
@@ -89,6 +107,43 @@ Lecture :
   Le F1 macro (0,33) et le rappel carbone / h-BN (0 %) le montrent tout de suite.
 - L'augmentation du v2 est ce qui rend le modèle utilisable sur des mesures (36 % → 86 % sur Southampton).
 - Le v3 permet enfin de mesurer l'écart simulé / réel, et depuis le 23/11 sur du carbone.
+
+## 3.b Entraîné sur le théorique, testé sur le mesuré : métriques par type
+
+Les modèles sont entraînés **uniquement sur `type_donnee = theorique`**. Côté théorique, le score est celui de la
+validation groupée (matériaux inconnus). Côté mesuré, chaque spectre passe par le modèle adapté à sa plage, comme
+dans l'outil final : XGBoost pics si le spectre va au-delà de 1700 cm⁻¹ (7 spectres), XGBoost spectre sur
+100-620 cm⁻¹ sinon (521 Southampton). Fichier : `resultats/shortlist_v3/metriques_theorique_vs_mesure.csv`,
+figure `08c_theorique_vs_mesure_confusion.png`.
+
+| Type | N | Accuracy | F1 macro | Accuracy équilibrée | Rappel carbone | Rappel h-BN | Rappel TMD | Précision carbone | Précision TMD |
+|---|---|---|---|---|---|---|---|---|---|
+| théorique (groupé) | 3750 | 73,1 % | 0,72 | 73,1 % | 67 % | 53 % | 99 % | 0,74 | 0,80 |
+| mesuré, tout | 528 | 86,4 % | 0,60 | 93,1 % | 100 % (4/4) | - | 86 % | 0,16 | 1,00 |
+| mesuré brut | 296 | 82,4 % | 0,70 | 91,1 % | 100 % (4/4) | - | 82 % | 0,33 | 1,00 |
+| mesuré traité par les auteurs | 232 | 91,4 % | - | 91,4 % | - | - | 91 % | - | 1,00 |
+
+Matrices de confusion (nombre de spectres) :
+
+| Théorique, groupé | prédit carbone | prédit h-BN | prédit TMD |
+|---|---|---|---|
+| vrai carbone | 841 | 400 | 9 |
+| vrai h-BN | 289 | 662 | 299 |
+| vrai TMD | 1 | 11 | 1238 |
+
+| Mesuré | prédit carbone | prédit h-BN | prédit TMD |
+|---|---|---|---|
+| vrai carbone | 4 | 0 | 0 |
+| vrai TMD | 21 | 51 | 452 |
+
+Lecture :
+- Sur le théorique, l'erreur est surtout **carbone ↔ h-BN** (les matériaux légers se ressemblent) ; les TMD sont
+  presque parfaits.
+- Sur le mesuré, les 4 graphites sont reconnus, mais 72 TMD réels (14 %) sont pris pour du carbone ou du h-BN.
+  D'où une **précision carbone de 0,16** : quand le modèle dit « carbone » sur une mesure, il a tort 21 fois sur 25.
+  Le F1 macro (0,60) le montre, l'accuracy (86 %) non.
+- Le mesuré brut (fond de photoluminescence, résonance) est plus dur que le mesuré traité (82 % contre 91 % sur les TMD).
+- Il n'y a pas de h-BN mesuré : on ne peut pas encore dire si le modèle reconnaît un vrai h-BN.
 
 ## 4. Résultats sur v3 : tous les modèles
 
