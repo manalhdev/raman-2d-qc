@@ -1,0 +1,8 @@
+version,entrainement,test,n_test,accuracy,f1_macro,rappel_carbone,rappel_h-BN,rappel_TMD
+v1,133 calculés,matériau laissé de côté (133),133,0.9548872180451128,0.33202614379084966,0.0,0.0,1.0
+v1,133 calculés,réel 532 nm plage complète (7),7,0.5714285714285714,0.5333333333333333,0.25,,1.0
+v1,133 calculés,réel Southampton 100-620 cm⁻¹ (521),521,0.36084452975047987,,,,0.36084452975047987
+v2 / v3 cv,3750 simulés,validation aléatoire,3750,0.9890666666666666,0.9890655803130204,0.9952,0.984,0.988
+v2 / v3 cv,3750 simulés,validation groupée (matériaux inconnus),3750,0.7309333333333333,0.7206431019198559,0.6728,0.5296,0.9904
+v3,3750 simulés,réel 532 nm plage complète (7),7,1.0,1.0,1.0,,1.0
+v3,3750 simulés,réel Southampton 100-620 cm⁻¹ (521),521,0.8618042226487524,,,,0.8618042226487524

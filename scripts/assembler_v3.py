@@ -31,11 +31,16 @@ def main():
                           temperature_K=lr.temperature_K, excitation_nm=lr.excitation_nm,
                           cm1_min=lr.cm1_min.clip(lower=100), cm1_max=lr.cm1_max.clip(upper=3200)))
     lab = pd.concat([s, r], ignore_index=True)
+    # demandé par le tuteur : séparer clairement données théoriques (calcul DFT + simulation) et données mesurées
+    lab.insert(2, "type_donnee", np.where(lab.type == "simule", "theorique", "mesure"))
+    traite = pd.concat([pd.Series(False, index=s.index), lr.traite_par_auteurs.astype(bool)], ignore_index=True)
+    lab.insert(3, "detail_donnee", np.where(lab.type == "simule", "calcul DFT + simulation de mesure",
+                                            np.where(traite, "mesure traitee par les auteurs", "mesure brute")))
     X = np.vstack([d2["X"].astype(np.float32), dr["X"].astype(np.float32)])
     np.savez_compressed(v3 / "spectres_v3.npz", X=X, grid=d2["grid"])
     lab.to_csv(v3 / "etiquettes_v3.csv", index=False)
     print(X.shape)
-    print(lab.groupby(["type", "split", "famille"]).size().to_string())
+    print(lab.groupby(["type_donnee", "detail_donnee", "famille"]).size().to_string())
 
 
 if __name__ == "__main__":

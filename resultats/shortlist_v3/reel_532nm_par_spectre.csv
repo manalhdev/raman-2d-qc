@@ -1,0 +1,8 @@
+source,vraie famille,matériau,XGBoost pics,proba pics,XGBoost spectre,CNN 1D,ensemble conforme 95 %,hors domaine
+RRUFF_R050503,carbone,graphite,carbone,0.98,carbone,carbone,"carbone, h-BN, TMD",True
+RRUFF_R090047,carbone,graphite,carbone,0.98,carbone,carbone,"carbone, h-BN, TMD",True
+RRUFF_R120025,carbone,graphite,carbone,1.0,h-BN,carbone,carbone,False
+RRUFF_R050209,TMD,MoS2,TMD,0.97,TMD,TMD,TMD,False
+RRUFF_R060124,TMD,MoS2,TMD,0.99,TMD,TMD,TMD,False
+RRUFF_R070616,TMD,WS2,TMD,1.0,TMD,TMD,TMD,True
+Mendeley_graphite_2019,carbone,graphite,carbone,1.0,carbone,carbone,carbone,True

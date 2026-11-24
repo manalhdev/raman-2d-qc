@@ -520,3 +520,10 @@ TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",
 TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,776.18,1.5974,4.4,623.2,True
 TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,778.16,1.5933,3.1,622.1,True
 TMD,Southampton_HS57_2021,MoSe2/WSe2,"hétérobicouche (HS57), encapsulée hBN",4,780.1,1.5893,3.1,620.6,True
+carbone,RRUFF_R050503,graphite,massif,293,532.0,2.3305,86.0,6629.3,False
+carbone,RRUFF_R090047,graphite,massif,293,532.0,2.3305,86.0,6629.3,False
+carbone,RRUFF_R120025,graphite,"massif (avec défauts, identification non confirmée)",293,532.0,2.3305,103.7,4244.1,False
+TMD,RRUFF_R050209,MoS2,massif 2H,293,532.0,2.3305,86.7,6630.0,False
+TMD,RRUFF_R060124,MoS2,massif,293,532.0,2.3305,86.0,6629.3,False
+TMD,RRUFF_R070616,WS2,massif 3R (mélangé avec PbS),293,532.0,2.3305,119.1,6569.8,False
+carbone,Mendeley_graphite_2019,graphite,massif (poudre),293,532.0,2.3305,501.9,3499.2,False

@@ -37,7 +37,7 @@ def fig04(racine, res):
     w = 0.26
     for j, (col, nom, c) in enumerate([("acc_aleatoire", "Validation aléatoire (fuite)", BLEU),
                                        ("acc_groupee", "Validation groupée par matériau", ORANGE),
-                                       ("acc_reel", "Test sur 521 spectres mesurés", VERT_EAU)]):
+                                       ("acc_reel", "Test sur 528 spectres mesurés (524 TMD, 4 graphite)", VERT_EAU)]):
         b = ax.bar(x + (j - 1) * w, 100 * r[col], width=w - 0.03, color=c, label=nom)
         ax.bar_label(b, fmt="%.0f", fontsize=8.5, color=ENCRE_2, padding=2)
     ax.set_xticks(x, r.modele, fontsize=9.5)
