@@ -1,12 +1,12 @@
-numpy
-pandas
-spglib
-matplotlib
-scikit-learn
-scipy
-openpyxl
-xgboost
-joblib
-streamlit
-torch            # CNN 1D (notebooks/Modeles_Raman_v3.ipynb)
+numpy==2.5.3
+pandas==3.0.6
+spglib==2.8.0
+matplotlib==3.11.2
+scikit-learn==1.9.1
+scipy==1.18.1
+openpyxl==3.1.5
+xgboost==3.4.1
+joblib==1.6.0
+streamlit==1.66.1
+torch            # CNN 1D (notebooks/Modeles_Raman_v3.ipynb) — version non figée (non installée sur ce poste)
 # tabpfn         # optionnel : modèle soumis à licence sur Hugging Face
