@@ -107,6 +107,14 @@ Relancé le 23/11 avec les 528 spectres mesurés (dont 4 graphite) et le F1 macr
 - Carbone et h-BN (3 matériaux chacun) ne sont presque jamais reconnus sur un matériau nouveau : il faut plus de matériaux.
 - SVM + SNIP : 99,4 % sur le réel, mais 1 graphite réel sur 4 seulement ; KNN, régression logistique, Random Forest
   et MLP reconnaissent les 4. Détail : [`docs/versions_et_resultats.md`](docs/versions_et_resultats.md).
+
+⚠️ **Reproductibilité (24/11/2026)** : `requirements.txt` ne fixait aucune version (voir le même problème,
+corrigé puis reperdu lors de l'ajout des spectres RRUFF/Mendeley le 23/11). Un écart de 10 à 20 points avait
+été mesuré en novembre entre deux versions de librairies pour KNN, la régression logistique et le MLP. Versions
+désormais figées de nouveau. Une ré-exécution de `comparer_modeles.py` avec ces versions retrouve les chiffres
+ci-dessus à moins de 0,2 point près, sauf XGBoost (jusqu'à ±0,2 point d'une exécution à l'autre, même versions,
+même code) : c'est le multithreading de son histogramme (`tree_method="hist"`, `n_jobs=-1`), pas un problème de
+version — bien plus petit que l'écart initial, mais à garder en tête pour XGBoost seulement.
 - Fréquences calculées toutes trop basses de 7 à 137 cm⁻¹ (1 à 9 %), décalage différent selon le matériau et le mode.
 
 Figures (PNG 300 dpi + SVG, style commun `scripts/style_figures.py`) : `figures/fig01` à `fig10`.
